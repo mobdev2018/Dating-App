@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Bold.otf">
+            <string>FiraSans-Bold</string>
+        </array>
+        <array key="FiraSans-Regular.otf">
+            <string>FiraSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="68" id="2eR-Y6-Tin" customClass="SliderViewCell" customModule="Dots" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2eR-Y6-Tin" id="rPA-if-R0b">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kW9-0b-OeZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1I-Jp-ZSP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vWE-NI-d3s">
+                                        <rect key="frame" x="25.5" y="15" width="322.5" height="16"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="13"/>
+                                        <color key="textColor" red="0.1199576482" green="0.68303710220000002" blue="0.71404665710000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 Mi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11b-nE-YsF">
+                                        <rect key="frame" x="302" y="11" width="46" height="23"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="11b-nE-YsF" secondAttribute="bottom" id="ALQ-Or-ZYF"/>
+                                    <constraint firstItem="vWE-NI-d3s" firstAttribute="width" secondItem="c1I-Jp-ZSP" secondAttribute="width" multiplier="0.86" id="QZO-Ac-63v"/>
+                                    <constraint firstItem="11b-nE-YsF" firstAttribute="top" secondItem="c1I-Jp-ZSP" secondAttribute="top" priority="250" id="c01-p6-j9E"/>
+                                    <constraint firstItem="vWE-NI-d3s" firstAttribute="top" secondItem="c1I-Jp-ZSP" secondAttribute="top" priority="250" id="dUL-By-jp2"/>
+                                    <constraint firstAttribute="bottom" secondItem="vWE-NI-d3s" secondAttribute="bottom" constant="3" id="gVN-23-kGo"/>
+                                    <constraint firstItem="11b-nE-YsF" firstAttribute="trailing" secondItem="vWE-NI-d3s" secondAttribute="trailing" id="rDA-Qg-dn9"/>
+                                    <constraint firstItem="vWE-NI-d3s" firstAttribute="centerX" secondItem="c1I-Jp-ZSP" secondAttribute="centerX" id="tYI-t3-xYU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVJ-Xu-jT6">
+                                <rect key="frame" x="0.0" y="34" width="375" height="33.5"/>
+                                <subviews>
+                                    <slider opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.59999999999999998" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fvK-W7-ZUH" customClass="TBSlider" customModule="Dots" customModuleProvider="target">
+                                        <rect key="frame" x="24.5" y="-2" width="326.5" height="31"/>
+                                        <color key="tintColor" red="0.45847523212432861" green="0.77236932516098022" blue="0.83601516485214233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="minimumTrackTintColor" red="0.71788865329999996" green="0.50232005120000001" blue="0.62533372639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.45847523210000002" green="0.77236932520000001" blue="0.83601516490000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="onValue" destination="2eR-Y6-Tin" eventType="valueChanged" id="8Mg-l1-dhA"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="fvK-W7-ZUH" firstAttribute="centerY" secondItem="nVJ-Xu-jT6" secondAttribute="centerY" constant="-4" id="BJs-s3-maW"/>
+                                    <constraint firstItem="fvK-W7-ZUH" firstAttribute="centerX" secondItem="nVJ-Xu-jT6" secondAttribute="centerX" id="zJS-gA-b8E"/>
+                                    <constraint firstItem="fvK-W7-ZUH" firstAttribute="width" secondItem="nVJ-Xu-jT6" secondAttribute="width" multiplier="0.86" id="zby-LG-YSv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nVJ-Xu-jT6" firstAttribute="top" secondItem="c1I-Jp-ZSP" secondAttribute="bottom" id="4C9-1H-dbs"/>
+                            <constraint firstItem="c1I-Jp-ZSP" firstAttribute="top" secondItem="kW9-0b-OeZ" secondAttribute="top" id="9HC-UO-mjP"/>
+                            <constraint firstAttribute="trailing" secondItem="nVJ-Xu-jT6" secondAttribute="trailing" id="MOJ-mu-enz"/>
+                            <constraint firstItem="c1I-Jp-ZSP" firstAttribute="leading" secondItem="kW9-0b-OeZ" secondAttribute="leading" id="OSn-i4-hXy"/>
+                            <constraint firstAttribute="bottom" secondItem="nVJ-Xu-jT6" secondAttribute="bottom" id="cqt-VZ-guj"/>
+                            <constraint firstItem="nVJ-Xu-jT6" firstAttribute="leading" secondItem="kW9-0b-OeZ" secondAttribute="leading" id="lTb-la-Q89"/>
+                            <constraint firstItem="c1I-Jp-ZSP" firstAttribute="height" secondItem="kW9-0b-OeZ" secondAttribute="height" multiplier="1:2" id="plQ-rj-bMX"/>
+                            <constraint firstAttribute="trailing" secondItem="c1I-Jp-ZSP" secondAttribute="trailing" id="yuW-xp-5wk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="kW9-0b-OeZ" secondAttribute="trailing" id="Bdq-vl-foJ"/>
+                    <constraint firstAttribute="bottom" secondItem="kW9-0b-OeZ" secondAttribute="bottom" id="OxP-yD-DkA"/>
+                    <constraint firstItem="kW9-0b-OeZ" firstAttribute="leading" secondItem="rPA-if-R0b" secondAttribute="leading" id="tmU-pP-UhG"/>
+                    <constraint firstItem="kW9-0b-OeZ" firstAttribute="top" secondItem="rPA-if-R0b" secondAttribute="top" id="uuS-S1-8WG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLbl" destination="vWE-NI-d3s" id="wlE-6v-hit"/>
+                <outlet property="slider" destination="fvK-W7-ZUH" id="a3B-bg-kbn"/>
+                <outlet property="valueLbl" destination="11b-nE-YsF" id="1N0-gt-n3b"/>
+            </connections>
+            <point key="canvasLocation" x="-96.5" y="-49"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Bold.otf">
+            <string>FiraSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="107" id="UDF-wM-fqQ" customClass="DetailsCell" customModule="Dots" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UDF-wM-fqQ" id="P6J-RV-j9I">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="106.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPh-8k-XW9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="106.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PERSONAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wTE-TL-Lle">
+                                <rect key="frame" x="26" y="8" width="76.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="16"/>
+                                <color key="textColor" red="0.45882352941176469" green="0.77254901960784317" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXG-jQ-g6K" customClass="ProfileDetailsView" customModule="Dots" customModuleProvider="target">
+                                <rect key="frame" x="40" y="38.5" width="330" height="63"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFt-O7-tPb">
+                                <rect key="frame" x="117" y="16.5" width="230" height="1"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.72867139569999995" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="eh0-RW-7qf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LXG-jQ-g6K" firstAttribute="leading" secondItem="fPh-8k-XW9" secondAttribute="leading" constant="40" id="9gE-Ie-pgs"/>
+                            <constraint firstItem="wTE-TL-Lle" firstAttribute="top" secondItem="fPh-8k-XW9" secondAttribute="top" constant="8" id="DBK-PK-rnL"/>
+                            <constraint firstItem="sFt-O7-tPb" firstAttribute="centerY" secondItem="wTE-TL-Lle" secondAttribute="centerY" constant="-1" id="MFt-S5-EO9"/>
+                            <constraint firstItem="wTE-TL-Lle" firstAttribute="leading" secondItem="fPh-8k-XW9" secondAttribute="leading" constant="26" id="W0n-dm-Oqy"/>
+                            <constraint firstItem="LXG-jQ-g6K" firstAttribute="top" secondItem="wTE-TL-Lle" secondAttribute="bottom" constant="11" id="dz1-kA-2Vk"/>
+                            <constraint firstItem="sFt-O7-tPb" firstAttribute="leading" secondItem="wTE-TL-Lle" secondAttribute="trailing" priority="250" constant="14.5" id="lA5-G4-lZk"/>
+                            <constraint firstAttribute="bottom" secondItem="LXG-jQ-g6K" secondAttribute="bottom" constant="5" id="vVf-0L-Ycb"/>
+                            <constraint firstAttribute="trailing" secondItem="LXG-jQ-g6K" secondAttribute="trailing" constant="5" id="wAF-ut-Uwm"/>
+                            <constraint firstAttribute="trailing" secondItem="sFt-O7-tPb" secondAttribute="trailing" constant="28" id="zmO-Hr-QIl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="fPh-8k-XW9" secondAttribute="bottom" id="8gA-2Y-z9E"/>
+                    <constraint firstAttribute="trailing" secondItem="fPh-8k-XW9" secondAttribute="trailing" id="CSq-j2-4x4"/>
+                    <constraint firstItem="fPh-8k-XW9" firstAttribute="leading" secondItem="P6J-RV-j9I" secondAttribute="leading" id="VbO-ze-Lsa"/>
+                    <constraint firstItem="fPh-8k-XW9" firstAttribute="top" secondItem="P6J-RV-j9I" secondAttribute="top" id="zgM-2h-scf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="detailsView" destination="LXG-jQ-g6K" id="Mtq-Fa-Z5u"/>
+                <outlet property="nameLbl" destination="wTE-TL-Lle" id="OI5-Ak-B2r"/>
+            </connections>
+            <point key="canvasLocation" x="-94.5" y="-35.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Bold.otf">
+            <string>FiraSans-Bold</string>
+        </array>
+        <array key="FiraSans-Regular.otf">
+            <string>FiraSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="68" id="KF4-lV-dAd" customClass="RangeSliderCell" customModule="Dots" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KF4-lV-dAd" id="mN6-aB-8v6">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ljj-tF-Yz4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KeF-ms-ewP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="K3p-mc-OmG">
+                                        <rect key="frame" x="25.5" y="0.0" width="322.5" height="34"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="13"/>
+                                        <color key="textColor" red="0.1199576482" green="0.68303710220000002" blue="0.71404665710000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 Mi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJ9-FS-jXS">
+                                        <rect key="frame" x="302" y="0.0" width="46" height="34"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="FJ9-FS-jXS" secondAttribute="bottom" id="1CV-1w-hRv"/>
+                                    <constraint firstItem="K3p-mc-OmG" firstAttribute="centerX" secondItem="KeF-ms-ewP" secondAttribute="centerX" id="D4P-RI-XF7"/>
+                                    <constraint firstItem="K3p-mc-OmG" firstAttribute="top" secondItem="KeF-ms-ewP" secondAttribute="top" priority="250" id="HBI-M5-Sht"/>
+                                    <constraint firstItem="FJ9-FS-jXS" firstAttribute="top" secondItem="KeF-ms-ewP" secondAttribute="top" priority="250" id="XfH-l5-PFW"/>
+                                    <constraint firstItem="K3p-mc-OmG" firstAttribute="width" secondItem="KeF-ms-ewP" secondAttribute="width" multiplier="0.86" id="h8B-qL-WV1"/>
+                                    <constraint firstItem="FJ9-FS-jXS" firstAttribute="trailing" secondItem="K3p-mc-OmG" secondAttribute="trailing" id="iB9-AL-fat"/>
+                                    <constraint firstAttribute="bottom" secondItem="K3p-mc-OmG" secondAttribute="bottom" constant="3" id="qms-4M-sg3"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Osx-NG-DPC">
+                                <rect key="frame" x="0.0" y="34" width="375" height="33.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bo-19-bBR" customClass="NHRangeSlider" customModule="Dots" customModuleProvider="target">
+                                        <rect key="frame" x="26.5" y="8" width="322.5" height="16.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="onValueChanged:" destination="KF4-lV-dAd" eventType="valueChanged" id="Nwo-Mx-hMs"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="2bo-19-bBR" firstAttribute="centerX" secondItem="Osx-NG-DPC" secondAttribute="centerX" id="2Yu-do-As4"/>
+                                    <constraint firstItem="2bo-19-bBR" firstAttribute="width" secondItem="Osx-NG-DPC" secondAttribute="width" multiplier="0.86" id="QXw-Xz-5vo"/>
+                                    <constraint firstItem="2bo-19-bBR" firstAttribute="centerY" secondItem="Osx-NG-DPC" secondAttribute="centerY" id="ZSs-yD-FE1"/>
+                                    <constraint firstItem="2bo-19-bBR" firstAttribute="height" secondItem="Osx-NG-DPC" secondAttribute="height" multiplier="0.5" id="d1b-oB-uxT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KeF-ms-ewP" firstAttribute="leading" secondItem="Ljj-tF-Yz4" secondAttribute="leading" id="CXf-Ve-03a"/>
+                            <constraint firstItem="Osx-NG-DPC" firstAttribute="leading" secondItem="Ljj-tF-Yz4" secondAttribute="leading" id="HaJ-Nh-Whf"/>
+                            <constraint firstAttribute="trailing" secondItem="KeF-ms-ewP" secondAttribute="trailing" id="KpS-cl-n5S"/>
+                            <constraint firstItem="KeF-ms-ewP" firstAttribute="height" secondItem="Ljj-tF-Yz4" secondAttribute="height" multiplier="1:2" id="OLL-8a-1Rn"/>
+                            <constraint firstAttribute="bottom" secondItem="Osx-NG-DPC" secondAttribute="bottom" id="ajX-s1-XGz"/>
+                            <constraint firstAttribute="trailing" secondItem="Osx-NG-DPC" secondAttribute="trailing" id="cLQ-Dj-Ogr"/>
+                            <constraint firstItem="KeF-ms-ewP" firstAttribute="top" secondItem="Ljj-tF-Yz4" secondAttribute="top" id="g98-vY-HJJ"/>
+                            <constraint firstItem="Osx-NG-DPC" firstAttribute="top" secondItem="KeF-ms-ewP" secondAttribute="bottom" id="vAV-rV-r9e"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ljj-tF-Yz4" firstAttribute="top" secondItem="mN6-aB-8v6" secondAttribute="top" id="N5w-wi-JHI"/>
+                    <constraint firstAttribute="bottom" secondItem="Ljj-tF-Yz4" secondAttribute="bottom" id="dXN-Ph-Z8Q"/>
+                    <constraint firstAttribute="trailing" secondItem="Ljj-tF-Yz4" secondAttribute="trailing" id="fcG-Ef-n5u"/>
+                    <constraint firstItem="Ljj-tF-Yz4" firstAttribute="leading" secondItem="mN6-aB-8v6" secondAttribute="leading" id="gkp-cL-mmW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLbl" destination="K3p-mc-OmG" id="31Q-98-7PN"/>
+                <outlet property="rangeSlider" destination="2bo-19-bBR" id="JIa-Bo-zPC"/>
+                <outlet property="valueLbl" destination="FJ9-FS-jXS" id="Upj-dg-Nhx"/>
+            </connections>
+            <point key="canvasLocation" x="-96.5" y="-49"/>
+        </tableViewCell>
+    </objects>
+</document>

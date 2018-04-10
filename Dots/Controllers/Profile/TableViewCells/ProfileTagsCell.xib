@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Lwd-oZ-FOg" customClass="ProfileTagsCell" customModule="Dots" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lwd-oZ-FOg" id="tZH-fy-Lec">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9p-Ev-F7u">
+                        <rect key="frame" x="8" y="8" width="0.0" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9nx-Cz-jFb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hwb-He-waP" customClass="TagsCollectionView" customModule="Dots" customModuleProvider="target">
+                                <rect key="frame" x="27" y="0.0" width="322.5" height="43.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eyD-3M-bLx" customClass="FlowLayout" customModule="Dots" customModuleProvider="target">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hwb-He-waP" firstAttribute="top" secondItem="9nx-Cz-jFb" secondAttribute="top" id="8FK-7l-E41"/>
+                            <constraint firstItem="hwb-He-waP" firstAttribute="width" secondItem="9nx-Cz-jFb" secondAttribute="width" multiplier="0.86" id="Ipy-so-UA6"/>
+                            <constraint firstItem="hwb-He-waP" firstAttribute="centerX" secondItem="9nx-Cz-jFb" secondAttribute="centerX" id="TZ4-2W-EUo"/>
+                            <constraint firstAttribute="bottom" secondItem="hwb-He-waP" secondAttribute="bottom" id="q1I-n1-hZk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9nx-Cz-jFb" firstAttribute="leading" secondItem="tZH-fy-Lec" secondAttribute="leading" id="3GF-WX-yx8"/>
+                    <constraint firstItem="9nx-Cz-jFb" firstAttribute="top" secondItem="tZH-fy-Lec" secondAttribute="top" id="63e-c6-GZj"/>
+                    <constraint firstAttribute="bottom" secondItem="9nx-Cz-jFb" secondAttribute="bottom" id="LHi-ad-eJm"/>
+                    <constraint firstAttribute="trailing" secondItem="9nx-Cz-jFb" secondAttribute="trailing" id="eHp-7b-kWS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="hwb-He-waP" id="wV2-rV-2Uy"/>
+            </connections>
+            <point key="canvasLocation" x="-42.5" y="-195"/>
+        </tableViewCell>
+    </objects>
+</document>

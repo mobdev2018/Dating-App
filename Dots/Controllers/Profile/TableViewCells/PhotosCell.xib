@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="151" id="0UI-gh-Tbc" customClass="PhotosCell" customModule="Dots" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="391" height="151"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0UI-gh-Tbc" id="o7o-LV-Hhn">
+                <rect key="frame" x="0.0" y="0.0" width="391" height="150.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etG-gc-qy1">
+                        <rect key="frame" x="22" y="15" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9di-Io-rCB" customClass="PhotosCollectionView" customModule="Dots" customModuleProvider="target">
+                        <rect key="frame" x="25.5" y="0.0" width="340" height="150.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="rAH-Rd-s7U">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lb-kB-to6" userLabel="bottom separator">
+                        <rect key="frame" x="19" y="150" width="351.5" height="1"/>
+                        <color key="backgroundColor" red="0.78412288429999999" green="0.78830087179999997" blue="0.78818613289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Co2-bW-007"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="9di-Io-rCB" secondAttribute="bottom" id="3mv-Zk-28P"/>
+                    <constraint firstItem="5lb-kB-to6" firstAttribute="centerX" secondItem="o7o-LV-Hhn" secondAttribute="centerX" id="5BG-1p-LY6"/>
+                    <constraint firstAttribute="bottom" secondItem="5lb-kB-to6" secondAttribute="bottom" constant="-0.5" id="Hdq-92-PAY"/>
+                    <constraint firstItem="9di-Io-rCB" firstAttribute="width" secondItem="o7o-LV-Hhn" secondAttribute="width" multiplier="0.87" id="Lt2-9T-OPr"/>
+                    <constraint firstItem="9di-Io-rCB" firstAttribute="top" secondItem="o7o-LV-Hhn" secondAttribute="top" id="PJz-9e-nQI"/>
+                    <constraint firstItem="5lb-kB-to6" firstAttribute="width" secondItem="o7o-LV-Hhn" secondAttribute="width" multiplier="0.9" id="TWT-o3-pH0"/>
+                    <constraint firstItem="9di-Io-rCB" firstAttribute="centerX" secondItem="o7o-LV-Hhn" secondAttribute="centerX" id="dZe-mN-Ddu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="9di-Io-rCB" id="Swt-TU-4Bc"/>
+                <outlet property="nameLbl" destination="etG-gc-qy1" id="EYJ-tc-ZjQ"/>
+            </connections>
+            <point key="canvasLocation" x="-229" y="-29"/>
+        </tableViewCell>
+    </objects>
+</document>
